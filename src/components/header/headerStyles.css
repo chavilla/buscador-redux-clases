@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	align-items: center;
+	background-color: #433185 !important;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__welcome {
+	color: #ffffff;
+}
