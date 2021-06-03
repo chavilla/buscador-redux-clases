@@ -25,9 +25,8 @@ class AutoCompleteComponent extends Component {
         </div>
         <InputBase
           placeholder="Search…"
-		  color='secondary'
           value={text}
-          style={{ width: "100%" }}
+          style={{ width: "100%", color: "#ffffff" }}
           onChange={(event) => {
             const newText = event.target.value;
 
