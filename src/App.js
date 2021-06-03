@@ -7,13 +7,17 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import AppBarComponent from "./components/appBar/AppBarComponent";
 import ResultComponent from "./pages/result/ResultComponent";
 import DetailComponent from "./pages/detail/DetailComponent";
+import { CssBaseline } from "@material-ui/core";
 
 class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
+        <CssBaseline />
+        <AppBarComponent />
         <Router>
           <Switch>
             <Route path="/results" component={ResultComponent} />

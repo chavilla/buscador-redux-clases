@@ -1,21 +1,13 @@
 import { types } from "../types/types";
+import { items } from "../../helpers/data/items";
 
-const initialState = [
-  {
-    id: 1,
-    title: "React",
-  },
-];
+const initialState = [];
 
 export const suggestionReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.findSuggestions:
-      return [
-        {
-          id: 1,
-          title: "React",
-        },
-      ];
+      const regex = new RegExp(`^${action.payload}`, "i");
+      return items.filter((item) => regex.test(item.title));
 
     default:
       return state;

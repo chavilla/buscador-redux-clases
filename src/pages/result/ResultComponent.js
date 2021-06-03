@@ -5,9 +5,7 @@ import ResultTemplate from "./ResultTemplate";
 class ResultComponent extends Component {
   render() {
     const { suggestions } = this.props;
-
-    console.log(this.props);
-
+    
     return <ResultTemplate suggestions={suggestions} />;
   }
 }
@@ -18,5 +16,11 @@ const mapStateToProps = (state) => {
     suggestions: state.suggestions,
   };
 };
+
+// connectiong to store. return a function
+/* const connectToStore = connect(mapStateToProps); */
+
+// connecting the component. Return the connectedComponent
+/* const ConnectedComponent = connectToStore(ResultComponent); */
 
 export default connect(mapStateToProps)(ResultComponent);
