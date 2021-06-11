@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CounterArea } from "./counterStyles";
 
-const CounterTemplate = ({ state, increment, decrement }) => {
+const CounterTemplate = ({ value, increment, startComponent }) => {
+
+  useEffect(() =>{
+    //startComponent();
+  });
+
   return (
     <CounterArea>
-      {state.value}
-      <button type="button" onClick={increment}>
+      { value}
+      <button type="button" onClick={()=> increment(value+1)}>
         +
       </button>
-      <button type="button" onClick={decrement}>
+      <button type="button">
         -
       </button>
     </CounterArea>
