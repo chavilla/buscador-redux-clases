@@ -6,6 +6,7 @@ import { resultReducer } from "./reducers/resultReducer";
 import { suggestionReducer } from "./reducers/suggestionsReducer";
 import rootSaga from "./sagas";
 import { counterReducer } from "./reducers/counterReducer";
+import { reducer as formReducer } from 'redux-form';
 
 /* Creating a saga middleware */
 const sagaMiddleware = createSagaMiddleware();
@@ -23,6 +24,7 @@ const reducer = combineReducers({
   suggestions: suggestionReducer,
   currentItem: currentItemReducer,
   counter: counterReducer,
+  form: formReducer,
 });
 
 /* Creating a store */

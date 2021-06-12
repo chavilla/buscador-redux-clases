@@ -14,6 +14,7 @@ import DetailComponent from "./pages/detail/DetailComponent";
 import { CssBaseline } from "@material-ui/core";
 import LifecycleComponent from "./components/lifecycle/LifecycleComponent"; */
 import CounterComponent from "./components/counter/CounterComponent";
+/* import FormReduxComp from "./components/forms/FormReduxComp"; */
 
 class App extends React.Component {
   render() {
