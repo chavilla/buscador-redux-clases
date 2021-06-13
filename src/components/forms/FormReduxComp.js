@@ -73,7 +73,7 @@ FormReduxComp = reduxForm({
 const DTformSelector = formValueSelector("LoginForm");
 
 const mapStateToProps = (state) => {
-  const { value } = state.counter.toJS();
+  const { value } = state.counter;
   return {
     value,
     email: DTformSelector(state, "email"),
